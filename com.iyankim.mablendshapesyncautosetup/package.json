@@ -7,7 +7,7 @@
 	"author": {
 		"name": "Iyan-Kim",
 		"email": "yunhyukjeong02@gmail.com",
-		"url": "https://github.com/Yunhyuk-Jeong/vpm-plane-fit-to-camera"
+		"url": "https://github.com/Yunhyuk-Jeong/vpm-ma-blendshape-sync-auto-setup"
 	},
 	"vpmDependencies": {
 		"nadena.dev.modular-avatar": ">=1.14.3"
