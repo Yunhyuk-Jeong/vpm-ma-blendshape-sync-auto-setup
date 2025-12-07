@@ -74,51 +74,51 @@ jobs:
 
             # 7) vpm.json 수정
             - name: Update vpm.json
-              run: |
-                  PKG_NAME="${{ steps.meta.outputs.pkg_name }}"
-                  VERSION="${{ steps.meta.outputs.version }}"
-                  DISPLAY="${{ steps.meta.outputs.display }}"
-                  DESC="${{ steps.meta.outputs.desc }}"
-                  AUTHOR_NAME="${{ steps.meta.outputs.author_name }}"
-                  AUTHOR_EMAIL="${{ steps.meta.outputs.author_email }}"
-                  AUTHOR_URL="${{ steps.meta.outputs.author_url }}"
-                  SHA="${{ steps.sha.outputs.sha }}"
+                run: |
+                PKG_NAME="${{ steps.meta.outputs.pkg_name }}"
+                VERSION="${{ steps.meta.outputs.version }}"
+                DISPLAY="${{ steps.meta.outputs.display }}"
+                DESC="${{ steps.meta.outputs.desc }}"
+                AUTHOR_NAME="${{ steps.meta.outputs.author_name }}"
+                AUTHOR_EMAIL="${{ steps.meta.outputs.author_email }}"
+                AUTHOR_URL="${{ steps.meta.outputs.author_url }}"
+                SHA="${{ steps.sha.outputs.sha }}"
 
-                  VPM="iyan-vpm/vpm.json"
+                VPM="iyan-vpm/vpm.json"
 
-                  URL="https://github.com/${{ github.repository }}/releases/download/v${VERSION}/${PKG_NAME}-${VERSION}.zip"
-                  REPO_URL="https://raw.githubusercontent.com/Yunhyuk-Jeong/iyan-vpm/main/vpm.json"
-                  DOC_URL="https://github.com/${{ github.repository }}"
-                  CHANGELOG_URL="https://github.com/${{ github.repository }}/releases/tag/v${VERSION}"
+                URL="https://github.com/${{ github.repository }}/releases/download/v${VERSION}/${PKG_NAME}-${VERSION}.zip"
+                REPO_URL="https://raw.githubusercontent.com/Yunhyuk-Jeong/iyan-vpm/main/vpm.json"
+                DOC_URL="https://github.com/${{ github.repository }}"
+                CHANGELOG_URL="https://github.com/${{ github.repository }}/releases/tag/v${VERSION}"
 
-                  jq \
-                    --arg pkg "$PKG_NAME" \
-                    --arg ver "$VERSION" \
-                    --arg disp "$DISPLAY" \
-                    --arg desc "$DESC" \
-                    --arg sha "$SHA" \
-                    --arg url "$URL" \
-                    --arg repo "$REPO_URL" \
-                    --arg doc "$DOC_URL" \
-                    --arg changelog "$CHANGELOG_URL" \
-                    --arg aName "$AUTHOR_NAME" \
-                    --arg aEmail "$AUTHOR_EMAIL" \
-                    --arg aUrl "$AUTHOR_URL" \
-                    '.packages[$pkg].versions[$ver] = {
-                      name: $pkg,
-                      displayName: $disp,
-                      version: $ver,
-                      unity: "2022.3",
-                      description: $desc,
-                      vrchatVersion: "2022.1.1",
-                      author: {name: $aName, email: $aEmail, url: $aUrl},
-                      dependencies: {},
-                      url: $url,
-                      repo: $repo,
-                      zipSHA256: $sha,
-                      documentationUrl: $doc,
-                      changelogUrl: $changelog
-                    }' "$VPM" > tmp && mv tmp "$VPM"
+                jq \
+                  --arg pkg "$PKG_NAME" \
+                  --arg ver "$VERSION" \
+                  --arg disp "$DISPLAY" \
+                  --arg desc "$DESC" \
+                  --arg sha "$SHA" \
+                  --arg url "$URL" \
+                  --arg repo "$REPO_URL" \
+                  --arg doc "$DOC_URL" \
+                  --arg changelog "$CHANGELOG_URL" \
+                  --arg aName "$AUTHOR_NAME" \
+                  --arg aEmail "$AUTHOR_EMAIL" \
+                  --arg aUrl "$AUTHOR_URL" \
+                  '.packages[$pkg].versions[$ver] = {
+                    name: $pkg,
+                    displayName: $disp,
+                    version: $ver,
+                    unity: "2022.3",
+                    description: $desc,
+                    vrchatVersion: "2022.1.1",
+                    author: {name: $aName, email: $aEmail, url: $aUrl},
+                    dependencies: {},
+                    url: $url,
+                    repo: $repo,
+                    zipSHA256: $sha,
+                    documentationUrl: $doc,
+                    changelogUrl: $changelog
+                  }' "$VPM" > tmp && mv tmp "$VPM"
 
             # 8) iyan-vpm에 커밋 & 푸시
             - name: Commit and push changes
