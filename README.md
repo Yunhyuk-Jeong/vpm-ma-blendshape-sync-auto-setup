@@ -267,6 +267,13 @@ If you encounter any problems or have questions, please open an issue on the rep
 
 ## 📌 Changelog
 
+### **1.0.7 – Modular Avatar Assembly Reference Fix**
+
+-   Fixed missing assembly references for nadena.dev.modular-avatar.core and core.editor.
+-   Resolved compile errors caused by invalid namespace resolution.
+-   Updated BlendshapeSyncAutoSetup.Editor.asmdef to correctly depend on Modular Avatar.
+-   Improved package stability in VPM/VCC installations.
+
 ### **1.0.6 – Corrected Zip Root Structure for VPM**
 
 -   Adjusted the GitHub Actions build pipeline so that the produced .zip places package.json, Editor/, and other files directly at the archive root.
