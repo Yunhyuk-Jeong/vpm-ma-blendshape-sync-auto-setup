@@ -1,6 +1,6 @@
 # Blendshape Sync Auto Setup Tool
 
-**Version 1.0.5**
+**Version 1.0.6**
 
 ---
 
@@ -266,6 +266,12 @@ Issues and pull requests are welcome!
 If you encounter any problems or have questions, please open an issue on the repository.
 
 ## 📌 Changelog
+
+### **1.0.6 – Corrected Zip Root Structure for VPM**
+
+-   Adjusted the GitHub Actions build pipeline so that the produced .zip places package.json, Editor/, and other files directly at the archive root.
+-   Fixes installation issues in VCC caused by previously nested folder structure.
+-   No code changes—only packaging and distribution fix.
 
 ### **1.0.5 – Comment Cleanup & Editor Assembly Definition Added**
 
