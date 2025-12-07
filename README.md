@@ -267,7 +267,12 @@ If you encounter any problems or have questions, please open an issue on the rep
 
 ## 📌 Changelog
 
-### 1.0.4 – Package Metadata Fix & Compatibility Update
+### **1.0.5 – Comment Cleanup & Editor Assembly Definition Added**
+
+-   Updated and cleaned up internal code comments for improved clarity and maintainability.
+-   Added BlendshapeSyncAutoSetup.Editor.asmdef to ensure proper editor-only compilation and cleaner project structure.
+
+### **1.0.4 – Package Metadata Fix & Compatibility Update**
 
 -   Updated package.json to use the correct author object format required by the VRChat VPM specification.
     This resolves installation failures in VCC where the package could not be deserialized correctly.

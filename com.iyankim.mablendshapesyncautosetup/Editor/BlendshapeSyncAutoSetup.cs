@@ -23,10 +23,10 @@ namespace nadena.dev.modular_avatar.editor
             Japanese
         }
 
-        // Default language: Korean
+        //* Default language: Korean
         private Language currentLanguage = Language.Korean;
 
-        // Localization dictionary
+        //* Localization dictionary
         private static readonly Dictionary<Language, Dictionary<string, string>> Localization =
             new Dictionary<Language, Dictionary<string, string>>
         {
@@ -122,7 +122,7 @@ namespace nadena.dev.modular_avatar.editor
         {
             if (go == null) return;
 
-            // Add self
+            //* Add self
             if (!targetObjects.Contains(go))
             {
                 var smr = go.GetComponent<SkinnedMeshRenderer>();
@@ -132,7 +132,7 @@ namespace nadena.dev.modular_avatar.editor
                 }
             }
 
-            // Children
+            //* Children
             if (includeChildren)
             {
                 foreach (Transform child in go.transform)
@@ -157,7 +157,7 @@ namespace nadena.dev.modular_avatar.editor
 
             EditorGUILayout.Space(10);
 
-            // Source Object
+            //* Source Object
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField(GetText("sourceObject"), GUILayout.Width(150));
             sourceObject = (GameObject)EditorGUILayout.ObjectField(
@@ -168,13 +168,13 @@ namespace nadena.dev.modular_avatar.editor
 
             EditorGUILayout.Space(5);
 
-            // Target Objects
+            //* Target Objects
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField(GetText("targetObjects"), EditorStyles.boldLabel);
             includeChildren = EditorGUILayout.Toggle(GetText("includeChildren"), includeChildren, GUILayout.Width(200));
             EditorGUILayout.EndHorizontal();
 
-            // Drop area
+            //* Drop area
             Rect dropArea = GUILayoutUtility.GetRect(0f, 80f, GUILayout.ExpandWidth(true));
             GUI.Box(dropArea, GetText("dropHint"), EditorStyles.helpBox);
 
@@ -241,7 +241,7 @@ namespace nadena.dev.modular_avatar.editor
 
             EditorGUILayout.Space(10);
 
-            // Common Blendshapes Preview
+            //* Common Blendshapes Preview
             if (sourceObject != null && targetObjects.Count > 0)
             {
                 UpdateCommonBlendshapes();
@@ -281,7 +281,7 @@ namespace nadena.dev.modular_avatar.editor
 
             EditorGUILayout.Space(10);
 
-            // Setup Button
+            //* Setup Button
             bool hasValidTargets = sourceObject != null && targetObjects.Any(t => t != null);
             int validTargetCount = commonBlendshapesPerTarget.Count(kvp => kvp.Key != null && kvp.Value.Count > 0);
 
@@ -296,7 +296,7 @@ namespace nadena.dev.modular_avatar.editor
 
             EditorGUILayout.Space(10);
 
-            // Language Selection – label on its own line, dropdown below (like PlaneFit tool)
+            //* Language Selection – label on its own line, dropdown below (like PlaneFit tool)
             EditorGUILayout.LabelField("Language / 언어 / 言語", EditorStyles.boldLabel);
             Language newLang = (Language)EditorGUILayout.EnumPopup(currentLanguage);
             if (newLang != currentLanguage)

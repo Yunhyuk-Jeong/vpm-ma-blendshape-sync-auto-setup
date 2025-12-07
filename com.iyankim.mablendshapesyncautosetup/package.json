@@ -1,7 +1,7 @@
 {
 	"name": "com.iyankim.mablendshapesyncautosetup",
 	"displayName": "MA Blendshape Sync Auto Setup",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"unity": "2022.3",
 	"description": "A Modular Avatar utility that automatically detects matching blendshapes and generates Blendshape Sync configurations with no manual setup required.",
 	"author": {
