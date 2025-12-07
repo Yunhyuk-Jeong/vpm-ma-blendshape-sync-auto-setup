@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using nadena.dev.modular_avatar.core;
 
+//* Create by Iyan-Kim
+
 namespace nadena.dev.modular_avatar.editor
 {
     public class BlendshapeSyncAutoSetup : EditorWindow
