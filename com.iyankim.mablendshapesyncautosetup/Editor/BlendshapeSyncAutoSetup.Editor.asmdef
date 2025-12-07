@@ -1,7 +1,10 @@
 {
 	"name": "BlendshapeSyncAutoSetup.Editor",
 	"rootNamespace": "",
-	"references": [],
+	"references": [
+		"nadena.dev.modular-avatar.core",
+		"nadena.dev.modular-avatar.core.editor"
+	],
 	"includePlatforms": [
 		"Editor"
 	],
