@@ -75,14 +75,14 @@ jobs:
             # 7) vpm.json 수정
             - name: Update vpm.json
               run: |
-                  PKG_NAME=${{ steps.meta.outputs.pkg_name }}
-                  VERSION=${{ steps.meta.outputs.version }}
-                  DISPLAY=${{ steps.meta.outputs.display }}
-                  DESC=${{ steps.meta.outputs.desc }}
-                  AUTHOR_NAME=${{ steps.meta.outputs.author_name }}
-                  AUTHOR_EMAIL=${{ steps.meta.outputs.author_email }}
-                  AUTHOR_URL=${{ steps.meta.outputs.author_url }}
-                  SHA=${{ steps.sha.outputs.sha }}
+                  PKG_NAME="${{ steps.meta.outputs.pkg_name }}"
+                  VERSION="${{ steps.meta.outputs.version }}"
+                  DISPLAY="${{ steps.meta.outputs.display }}"
+                  DESC="${{ steps.meta.outputs.desc }}"
+                  AUTHOR_NAME="${{ steps.meta.outputs.author_name }}"
+                  AUTHOR_EMAIL="${{ steps.meta.outputs.author_email }}"
+                  AUTHOR_URL="${{ steps.meta.outputs.author_url }}"
+                  SHA="${{ steps.sha.outputs.sha }}"
 
                   VPM="iyan-vpm/vpm.json"
 
