@@ -1,7 +1,5 @@
 # Blendshape Sync Auto Setup Tool
 
-**Version 1.0.6**
-
 ---
 
 ## 📖 English
@@ -264,67 +262,6 @@ Issues and pull requests are welcome!
 ## 📧 Support
 
 If you encounter any problems or have questions, please open an issue on the repository.
-
-## 📌 Changelog
-
-### **1.0.7 – Modular Avatar Assembly Reference Fix**
-
--   Fixed missing assembly references for nadena.dev.modular-avatar.core and core.editor.
--   Resolved compile errors caused by invalid namespace resolution.
--   Updated BlendshapeSyncAutoSetup.Editor.asmdef to correctly depend on Modular Avatar.
--   Improved package stability in VPM/VCC installations.
-
-### **1.0.6 – Corrected Zip Root Structure for VPM**
-
--   Adjusted the GitHub Actions build pipeline so that the produced .zip places package.json, Editor/, and other files directly at the archive root.
--   Fixes installation issues in VCC caused by previously nested folder structure.
--   No code changes—only packaging and distribution fix.
-
-### **1.0.5 – Comment Cleanup & Editor Assembly Definition Added**
-
--   Updated and cleaned up internal code comments for improved clarity and maintainability.
--   Added BlendshapeSyncAutoSetup.Editor.asmdef to ensure proper editor-only compilation and cleaner project structure.
-
-### **1.0.4 – Package Metadata Fix & Compatibility Update**
-
--   Updated package.json to use the correct author object format required by the VRChat VPM specification.
-    This resolves installation failures in VCC where the package could not be deserialized correctly.
--   Improved overall compatibility with the VRChat Creator Companion package installer.
--   No functional changes to runtime/editor behavior; this update focuses on fixing package metadata for proper distribution.
-
-### **1.0.3 — Internal Logic Improvements & Consistency Update**
-
-_(Based on comparison of 1.0.2 and latest features requested)_
-
--   Synchronized UI layout and behavior with updated editor tools
--   Improved naming consistency
--   Enhanced stability for handling multi-object drag-and-drop
--   Refinements to blendshape detection logic and preview formatting
--   Updated language display format to match newer tools (e.g., Plane Fit To Camera)
-
-### **1.0.2 — Improved Language & Default Locale Adjustment**
-
-_(Verified from 1.0.1 → 1.0.2 differences)_
-
--   Changed **default language from English → Korean**
--   Updated UI to match the style of Plane Fit tool (language label on its own row)
--   Minor text and layout improvements
--   Internal cleanup of localization structure
-
-### **1.0.1 — Language System Update**
-
-_(Verified from code differences between 1.0.0 and 1.0.1: added localization system)_
-
--   Introduced **full multi-language UI** (English, Korean, Japanese)
--   Added localization dictionary and language dropdown
--   Default language remained English
-
-### **1.0.0 — Initial Release**
-
--   First version of Blendshape Sync Auto Setup Tool
--   Automatic blendshape matching
--   Multi-target support
--   Basic UI and workflow
 
 ---
 
