@@ -1,6 +1,6 @@
 # Blendshape Sync Auto Setup Tool
 
-**Version 1.0.3**
+**Version 1.0.4**
 
 ---
 
@@ -266,6 +266,13 @@ Issues and pull requests are welcome!
 If you encounter any problems or have questions, please open an issue on the repository.
 
 ## 📌 Changelog
+
+### 1.0.4 – Package Metadata Fix & Compatibility Update
+
+-   Updated package.json to use the correct author object format required by the VRChat VPM specification.
+    This resolves installation failures in VCC where the package could not be deserialized correctly.
+-   Improved overall compatibility with the VRChat Creator Companion package installer.
+-   No functional changes to runtime/editor behavior; this update focuses on fixing package metadata for proper distribution.
 
 ### **1.0.3 — Internal Logic Improvements & Consistency Update**
 
