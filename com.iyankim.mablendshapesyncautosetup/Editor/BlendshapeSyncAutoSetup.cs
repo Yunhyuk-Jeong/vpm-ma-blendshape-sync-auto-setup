@@ -142,7 +142,7 @@ namespace nadena.dev.modular_avatar.editor
             }
         }
 
-        [MenuItem("Iyan-Kim/Tools/Modular Avatar Blendshape Sync Auto Setup")]
+        [MenuItem("Studio Iyan/Tools/Modular Avatar Blendshape Sync Auto Setup")]
         public static void ShowWindow()
         {
             var window = GetWindow<BlendshapeSyncAutoSetup>("Blendshape Sync Setup");
